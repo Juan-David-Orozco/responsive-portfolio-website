@@ -231,7 +231,11 @@ header {
   bottom: 0;
 }
 
-/* ACTIVE LINK */
+/* Active Link */
+.active-link {
+  color: var(--first-color);
+
+}
 
 /* Change background header */
 

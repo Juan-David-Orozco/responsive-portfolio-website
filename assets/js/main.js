@@ -123,3 +123,41 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
     }
   }
 });
+
+/* ================  SCROLL SECTIONS ACTIVE LINK  =================== */
+const sections = document.querySelectorAll('section[id]')
+console.log(sections)
+
+function scrollActive() {
+
+  const scrollY = window.pageYOffset
+
+  sections.forEach((currentSection) => {
+
+    const sectionHeight = currentSection.offsetHeight
+    const sectionTop = currentSection.offsetTop - 50;
+    var sectionId = currentSection.getAttribute('id')
+
+    console.log(sectionId)
+
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+    } else {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+    }
+    
+  })
+
+}
+
+window.addEventListener('scroll', scrollActive)
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+
+
+
+
+/*==================== SHOW SCROLL UP ====================*/ 
+
+
+/*==================== DARK LIGHT THEME ====================*/ 
