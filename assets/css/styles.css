@@ -113,6 +113,7 @@ img {
 /* ------------ REUSABLE CSS CLASSES  -------------- */
 .section {
   padding: 2rem 0 4rem;
+  margin: 1rem 0;
 }
 
 .section__title {
@@ -238,10 +239,13 @@ header {
 }
 
 /* Change background header */
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0,0, .15);
+}
 
 /* ------------ HOME --------------- */
 .home__container {
-  gap:1rem;
+  gap: 1rem;
 }
 
 .home__content {

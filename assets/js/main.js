@@ -136,9 +136,7 @@ function scrollActive() {
 
     const sectionHeight = currentSection.offsetHeight
     const sectionTop = currentSection.offsetTop - 50;
-    var sectionId = currentSection.getAttribute('id')
-
-    console.log(sectionId)
+    let sectionId = currentSection.getAttribute('id')
 
     if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
@@ -153,7 +151,13 @@ function scrollActive() {
 window.addEventListener('scroll', scrollActive)
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
+function scrollHeader () {
+  const nav = document.getElementById('header')
+  if(this.scrollY >= 80) nav.classList.add('scroll-header');
+  else nav.classList.remove('scroll-header');
+}
 
+window.addEventListener('scroll', scrollHeader)
 
 
 
